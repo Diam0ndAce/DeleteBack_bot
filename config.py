@@ -1,4 +1,4 @@
-TOKEN = '5512893264:AAEeqB27D4VeYwBfeT7zglOwX4ftK7p8Po4'
+TOKEN = 'some token'
 image_size = (128, 128)
 
 data_dir = 'Images_and_masks/'
