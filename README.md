@@ -1,5 +1,5 @@
 # DeleteBack_bot
-Телеграм-бот для удаления заднего фона фотографий кошек и собак
+Telegram bot for background removal from cats and dog pictures.
 ## Stack
 -Tensorflow
 
@@ -9,14 +9,14 @@
 
 -Albumentations
 
-## Описание метода машинного обучения
+## Description of the machine learning method
 
-В качестве метода по удалению заднего фона использовалась сегментация изображения. То есть для каждого изображения создавалась маска, состоящая из значений классов, к которому принадлежит каждый пиксель изображения. 
+Image segmentation was used as a method to remove the background. That is, for each image, a mask was created, consisting of the values of the classes to which each image pixel belongs.
 
-Для решения проблемы сегментации изображения использовалась нейронная сеть, построенная на архитектуре U-Net. В качестве Encoder использовалась преобученная модель VGG16.
+To solve the problem of image segmentation, a neural network built on the U-Net architecture was used. The pre-trained VGG16 model was used as the Encoder.
 
-Для обучения модели использовался датасет The Oxford-IIIT Pet Dataset, доступный по ссылке: https://www.kaggle.com/datasets/julinmaloof/the-oxfordiiit-pet-dataset?select=images . 
-Этот датасет состоит из изображения домашних питомцев различных пород, а также масок к каждому изображению, где каждому пикселю поставлен в соответствие один из 3 классов: 1-питомец, 2-граница между питомцем и задним фоном, 3-задний фон
+The The Oxford-IIIT Pet Dataset was used to train the model. Dataset is accessible by link: https://www.kaggle.com/datasets/julinmaloof/the-oxfordiiit-pet-dataset?select=images. 
+This dataset consists of images of pets of various breeds, as well as masks for each image, where each pixel is assigned one of 3 classes: 1-pet, 2-border between the pet and the background, 3-background.
 
-## Пример работы бота
+## Example of bot's working
 ![example](example.jpg)
