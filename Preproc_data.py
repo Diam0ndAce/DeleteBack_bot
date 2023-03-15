@@ -29,7 +29,7 @@ def Data_to_Xy(path_img, path_mask):
     img, mask = sorted(iglob(data_dir+'Images/*.jpg'))[:data_size], sorted(iglob(data_dir+'Masks/*.png'))[:data_size]
     img, mask = list(map(Scale_image, img)), list(map(Scale_image, mask))
 
-    img = np.array(img) / 255  #####
+    img = np.array(img) / 255  
     mask = np.array(mask)
 
     mask -= 1  
@@ -54,10 +54,3 @@ def Preproc_data(aug=True):
         X, y = Augementation(X, y)
         
     return X, y
-
-"""
-if __name__ == '__main__':
-    X, y = Preproc_data()
-    print(X[0], '\n\n', y[0])
-    print(X.shape, y.shape)
-"""
